@@ -88,6 +88,17 @@ DATABASES = {
         'PORT': env('DB_PORT', default='5433'),
         
     },
+#crear otra instancia pero con las credenciales de supabase
+    'supabase': {
+
+        'ENGINE': 'django.db.backends.postgresql',
+        'HOST': '',
+        'NAME': '', 
+        'USER': '',
+        'PASSWORD': '',
+        'PORT':'',
+        
+    },
 
 
 
