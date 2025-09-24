@@ -16,7 +16,7 @@ class User(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     deleted_at = models.DateTimeField(null=True, blank=True)
     def __str__(self):
-        return self.name
+        return f"{self.name} {self.abrv}" 
 
 class Department(models.Model):
     id_department = models.AutoField(primary_key=True)
@@ -28,7 +28,7 @@ class Department(models.Model):
     deleted_at = models.DateTimeField(null=True, blank=True)
 
     def __str__(self):
-        return self.name
+        return f"{self.name} {self.abrv}" 
 
 class Country(models.Model):
     id_country = models.AutoField(primary_key=True)
@@ -39,7 +39,7 @@ class Country(models.Model):
     deleted_at = models.DateTimeField(null=True, blank=True)
 
     def __str__(self):
-        return self.name
+        return f"{self.name} {self.abrv}" 
 
 class City(models.Model):
     id_city = models.AutoField(primary_key=True)
@@ -51,5 +51,5 @@ class City(models.Model):
     deleted_at = models.DateTimeField(null=True, blank=True)
 
     def __str__(self):
-        return self.name
+        return f"{self.name} {self.abrv}" 
 
