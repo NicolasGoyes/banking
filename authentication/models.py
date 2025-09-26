@@ -15,8 +15,9 @@ class User(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     deleted_at = models.DateTimeField(null=True, blank=True)
+    
     def __str__(self):
-        return f"{self.name} {self.abrv}" 
+        return f"{self.firstname} {self.lastname}" 
 
 class Department(models.Model):
     id_department = models.AutoField(primary_key=True)
